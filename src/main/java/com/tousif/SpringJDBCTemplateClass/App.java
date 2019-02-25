@@ -106,9 +106,9 @@ public class App
 		 *    via a prepared statement, binding the given arguments.
 		 *    @Return : The number of rows affected
 		 */
-		studentJDBCTemplate.create("Zara", 11);
-		studentJDBCTemplate.create("Nuha", 2);
-		studentJDBCTemplate.create("Ayan", 15);
+//		studentJDBCTemplate.create("Zara", 11);
+//		studentJDBCTemplate.create("Nuha", 2);
+//		studentJDBCTemplate.create("Ayan", 15);
 
 		System.out.println("------Listing Multiple Records--------" );
 		/**
@@ -127,11 +127,11 @@ public class App
 			System.out.println("Age : " + record.getAge()+"\n");
 		}
 
-		System.out.println("----Updating Record with ID = 2 -----" );
-		studentJDBCTemplate.update(25, 20);
+		System.out.println("----Updating Age with ID = 22 -----" );
+		studentJDBCTemplate.update(22, 20);
 
-		System.out.println("----Listing Record with ID = 2 -----" );
-		Student student = studentJDBCTemplate.getStudent(25);
+		System.out.println("----Listing Record with ID = 22 -----" );
+		Student student = studentJDBCTemplate.getStudent(22);
 		System.out.print("ID : " + student.getId() );
 		System.out.print(", Name : " + student.getName() );
 		System.out.println(", Age : " + student.getAge());

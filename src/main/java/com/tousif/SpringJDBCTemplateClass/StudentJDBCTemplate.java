@@ -35,8 +35,9 @@ public class StudentJDBCTemplate implements StudentDAO {
 
 	public Student getStudent(Integer id) {
 		System.out.println("Inside getStudent()");
-		return null;
-	}
+		String SQL = "select * from Student where id = ?";
+		Student student = jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new StudentMapper());
+		return student;	}
 
 	public List<Student> listStudents() {
 		System.out.println("Inside listStudents()");
